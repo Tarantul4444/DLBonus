@@ -13,13 +13,13 @@ The repository includes the reviewed `data/kazakh_profanity.csv`. You can instal
 3. Execute the saved-model loading and prediction cells to enter a custom review.
 4. The final evaluation cell is enabled in the saved notebook from the completed experiment. Set `RUN_FINAL_TEST = False` before development runs to avoid repeating the final test unintentionally.
 
-For immediate inference without training, download the trained model weights and place them with the included tokenizer, configuration, and `run.json` under `artifacts/kaz-roberta-reviewed`. Then execute only Imports, Configuration, Load checkpoint, Predict review, and the example cell. The weight file is configured for Git LFS. Once this repository and its LFS objects are pushed, clone it with Git LFS enabled to obtain the weights. Publishing the configured files has not yet been completed.
+For immediate inference without training, download the trained model weights and place them with the included tokenizer, configuration, and `run.json` under `artifacts/kaz-roberta-reviewed`. Then execute only Imports, Configuration, Load checkpoint, Predict review, and the example cell. The weight file is configured for Git LFS. Once this repository and its LFS objects are pushed, clone it with Git LFS enabled to obtain the weights. The repository is published at https://github.com/Tarantul4444/DLBonus.
 
 ## Project status
 
 The repository contains a 5,000-review dataset, grouped 80/10/10 splits, preparation scripts, and a runnable fine-tuning and prediction notebook. The current annotation policy also includes some insulting uses of Kazakh words such as `мал`. This broad boundary must be described when presenting the project.
 
-The current trained checkpoint is in `artifacts/kaz-roberta-reviewed`. Training, validation, test evaluation, and error analysis have been completed. Test F1 is 0.9267 against the revised reference labels. Three test labels were corrected after inspecting the first evaluation, as documented below. The checkpoint is configured for distribution through Git LFS. Push the repository and its LFS objects, then verify a fresh clone before submission.
+The current trained checkpoint is in `artifacts/kaz-roberta-reviewed`. Training, validation, test evaluation, and error analysis have been completed. Test F1 is 0.9267 against the revised reference labels. Three test labels were corrected after inspecting the first evaluation, as documented below. The checkpoint is configured for distribution through Git LFS. The repository and checkpoint are distributed at https://github.com/Tarantul4444/DLBonus using Git LFS.
 
 ## 1. Prepare the dataset
 
@@ -212,12 +212,12 @@ To download the published project:
 
 ```powershell
 git lfs install
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd <CLONED_PROJECT_DIRECTORY>
+git clone https://github.com/Tarantul4444/DLBonus.git
+cd DLBonus
 git lfs pull
 ```
 
-The local configuration is ready, but a successful upload and fresh-clone verification remain pending. A small LFS pointer file alone is insufficient for model loading; `git lfs pull` must retrieve the actual weights.
+Use https://github.com/Tarantul4444/DLBonus.git as the repository URL. A small LFS pointer file alone is insufficient for model loading; `git lfs pull` must retrieve the actual weights.
 
 With the complete saved directory available, open `Bonus.ipynb` and run **Imports**, **Configuration**, **Load checkpoint**, **Predict review**, and the prediction example. Set `MODEL_DIR` to the downloaded checkpoint directory. No retraining is needed for these cells.
 
