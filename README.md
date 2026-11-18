@@ -1,19 +1,10 @@
 # Kazakh Profanity Detection
 
-DSSC5113 Algorithms of Computer Vision bonus project, KBTU, Fall 2026. Individual submission.
-
 The model reads one Kazakh or Kazakh–Russian product review or comment and returns a binary label and a score for class 1. Class `0` means that no target Kazakh profanity was identified. Class `1` means that a target Kazakh profane expression is present under the annotation policy below. Russian profanity alone receives `0`.
 
-## Quick start with the included dataset
+## Quick start
 
-The repository includes the reviewed `data/kazakh_profanity.csv`. You can install the dependencies and run `Bonus.ipynb` directly on this file. Downloading the raw ZIP, obtaining `shared.csv`, and running preparation scripts are optional source-reconstruction steps.
-
-1. Follow **Local setup** below and select the project virtual-environment kernel.
-2. Execute the notebook through **Run training** to train on the included 4,000 training examples and select the checkpoint and threshold using 500 validation examples.
-3. Execute the saved-model loading and prediction cells to enter a custom review.
-4. The final evaluation cell is enabled in the saved notebook from the completed experiment. Set `RUN_FINAL_TEST = False` before development runs to avoid repeating the final test unintentionally.
-
-For immediate inference without training, download the trained model weights and place them with the included tokenizer, configuration, and `run.json` under `artifacts/kaz-roberta-reviewed`. Then execute only Imports, Configuration, Load checkpoint, Predict review, and the example cell. The weight file is configured for Git LFS. Once this repository and its LFS objects are pushed, clone it with Git LFS enabled to obtain the weights. The repository is published at https://github.com/Tarantul4444/DLBonus.
+Read [QUICK START.md](QUICK%20START.md) for the required files and notebook cells to predict your own sentence.
 
 ## Project status
 
