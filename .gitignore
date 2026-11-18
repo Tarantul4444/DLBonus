@@ -1,0 +1,24 @@
+/data/raw/
+/data/shared.csv
+/.venv/
+# Keep final evaluation and inference configuration in the repository.
+/artifacts/*
+!/artifacts/kaz-roberta-reviewed/
+/artifacts/kaz-roberta-reviewed/*
+!/artifacts/kaz-roberta-reviewed/run.json
+!/artifacts/kaz-roberta-reviewed/test_metrics.json
+!/artifacts/kaz-roberta-reviewed/test_predictions.csv
+!/artifacts/kaz-roberta-reviewed/config.json
+!/artifacts/kaz-roberta-reviewed/tokenizer.json
+!/artifacts/kaz-roberta-reviewed/tokenizer_config.json
+!/artifacts/kaz-roberta-reviewed/model.safetensors
+# Historical preparation helpers are retained locally.
+/scripts/build_real_dataset.py
+/scripts/relabel_kazakh_only.py
+/scripts/reviewed_mal_positive_ids.txt
+/data/kazakh_profanity_real_5000.csv
+/data/kazakh_profanity_kazakh_only_5000.csv
+/data/reconstructed.csv
+/data/*.tmp
+/.ipynb_checkpoints/
+__pycache__/

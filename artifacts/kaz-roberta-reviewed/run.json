@@ -1,0 +1,40 @@
+{
+  "model": "kz-transformers/kaz-roberta-conversational",
+  "epoch": 1,
+  "seed": 42,
+  "epochs": 3,
+  "max_length": 128,
+  "batch_size": 8,
+  "learning_rate": 2e-05,
+  "threshold": 0.3548682630062103,
+  "validation_metrics": {
+    "examples": 500,
+    "precision": 0.9586206896551724,
+    "recall": 0.9652777777777778,
+    "f1": 0.9619377162629758,
+    "confusion_matrix": [
+      [
+        350,
+        6
+      ],
+      [
+        5,
+        139
+      ]
+    ]
+  },
+  "dataset_sha256": "8347b930ee426de579e06a89355f658062b0773446baafb5862dca0670f1ed41",
+  "split_sizes": {
+    "train": 4000,
+    "val": 500,
+    "test": 500
+  },
+  "weight_decay": 0.01,
+  "mixed_precision": true,
+  "versions": {
+    "torch": "2.11.0+cu128",
+    "transformers": "5.23.0",
+    "scikit_learn": "1.9.1",
+    "numpy": "2.5.4"
+  }
+}
